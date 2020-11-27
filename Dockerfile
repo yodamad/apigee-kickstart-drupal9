@@ -17,4 +17,4 @@ RUN cp /opt/drupal/web/sites/default/default.settings.php ./web/sites/default/se
 RUN mkdir /opt/drupal/web/sites/default/files
 RUN mkdir -p /var/www/private
 RUN chmod a+rwx /opt/drupal/web/sites/default/files /opt/drupal/web/sites/default/settings.php /var/www/private/
-RUN echo "$settings['file_private_path'] = '/var/www/private/';" >> /opt/drupal/web/sites/default/settings.php
+RUN echo "\$settings['file_private_path'] = '/var/www/private/';" >> /opt/drupal/web/sites/default/settings.php
