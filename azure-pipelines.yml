@@ -13,8 +13,9 @@ steps:
 - task: Docker@2
   displayName: Build an image
   inputs:
-    repository: "apigee-kickstart-drupal9"
+    repository: "yodamad/apigee-kickstart-drupal"
     command: buildAndPush
     Dockerfile: Dockerfile
     tags: |
-          drupal_9
+          9.x
+          latest
