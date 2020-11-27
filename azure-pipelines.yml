@@ -13,9 +13,10 @@ steps:
 - task: Docker@2
   displayName: Build an image
   inputs:
-    repository: "yodamad/apigee-kickstart-drupal"
-    command: buildAndPush
-    Dockerfile: Dockerfile
+    containerRegistry: 'docker_hub'
+    repository: 'yodamad/apigee-kickstart-drupal'
+    command: 'buildAndPush'
+    Dockerfile: 'Dockerfile'
     tags: |
-          9.x
-          latest
+      9.x
+      latest
